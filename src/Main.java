@@ -9,6 +9,8 @@ public class Main {
         p3();
         System.out.println();
         p4();
+        System.out.println();
+        p5();
     }
     static void p1() {
 
@@ -67,9 +69,9 @@ public class Main {
     }
     static void p4(){
 
-        int FirstNumber= 3; // Enter any verification number.
-        int SecondNumber=7; // Enter any verification number.
-        int ThirdNumber=5; // Enter any verification number.
+        int FirstNumber = 3; // Enter any verification number.
+        int SecondNumber = 7; // Enter any verification number.
+        int ThirdNumber = 5; // Enter any verification number.
         int StartingPoint = 0; // Only "0" as it is used to keep track of the number of positive integers.
 
           if (FirstNumber > 0) {
@@ -81,6 +83,37 @@ public class Main {
         }
         System.out.println(StartingPoint);
     }
+    static void p5() {
+
+        int FirstNumber = 3; // Enter any verification number.
+        int SecondNumber = 7; // Enter any verification number.
+        int ThirdNumber = -5; // Enter any verification number.
+        int positive = 0; // Only "0" as it is used to keep track of the number of positive integers.
+        int negative = 0; // Only "0" as it is used to keep track of the number of negative integers.
+
+        if (FirstNumber > 0) {
+            positive++;
+        } else if (FirstNumber < 0) {
+            negative++;
+        }
+
+        if (SecondNumber > 0) {
+            positive++;
+        } else if (SecondNumber < 0) {
+            negative++;
+        }
+
+        if (ThirdNumber > 0) {
+            positive++;
+        } else if (ThirdNumber < 0) {
+            negative++;
+        }
+
+        System.out.println("Positive numbers: " + positive);
+        System.out.println("Negative numbers: " + negative);
+    }
+
+
 }
 
 
