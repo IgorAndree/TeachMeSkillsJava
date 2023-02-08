@@ -11,6 +11,8 @@ public class Main {
         p4();
         System.out.println();
         p5();
+        System.out.println();
+        p6();
     }
     static void p1() {
 
@@ -111,6 +113,20 @@ public class Main {
 
         System.out.println("Positive numbers: " + positive);
         System.out.println("Negative numbers: " + negative);
+    }
+    static void p6() {
+
+        int FirstNumber = 3; // Enter any verification number.
+        int SecondNumber = 75; // Enter any verification number.
+        int LargerNumber; // Variable to output a larger value.
+
+        if (FirstNumber > SecondNumber) {
+            LargerNumber = FirstNumber;
+        } else {
+            LargerNumber = SecondNumber;
+        }
+
+        System.out.println("The Larger number is: " + LargerNumber);
     }
 
 
