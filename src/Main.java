@@ -13,6 +13,9 @@ public class Main {
         p5();
         System.out.println();
         p6();
+        System.out.println();
+        p7();
+
     }
     static void p1() {
 
@@ -87,9 +90,9 @@ public class Main {
     }
     static void p5() {
 
-        int FirstNumber = 3; // Enter any verification number.
+        int FirstNumber = -3; // Enter any verification number.
         int SecondNumber = 7; // Enter any verification number.
-        int ThirdNumber = -5; // Enter any verification number.
+        int ThirdNumber = 5; // Enter any verification number.
         int positive = 0; // Only "0" as it is used to keep track of the number of positive integers.
         int negative = 0; // Only "0" as it is used to keep track of the number of negative integers.
 
@@ -128,7 +131,16 @@ public class Main {
 
         System.out.println("The Larger number is: " + LargerNumber);
     }
+    static void p7() {
 
+        int NumberOfProgrammers = 375; // Enter any verification number.
+        int Pluralization = (NumberOfProgrammers == 1) ? 1 : 2; // Here I used the "ternary operator"+
+                                                                // to compare the number of programmers.
+
+        System.out.println(NumberOfProgrammers + " Programmer" + ((Pluralization == 2) ? "s" : ""));
+         // I also used the character " : " which defines true or false.
+
+    }
 
 }
 
