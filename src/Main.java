@@ -7,6 +7,8 @@ public class Main {
         p2();
         System.out.println();
         p3();
+        System.out.println();
+        p4();
     }
     static void p1() {
 
@@ -62,6 +64,22 @@ public class Main {
             result = 10; // since in this case the number is only "0".
         }
         System.out.println(result);
+    }
+    static void p4(){
+
+        int FirstNumber= 3; // Enter any verification number.
+        int SecondNumber=7; // Enter any verification number.
+        int ThirdNumber=5; // Enter any verification number.
+        int StartingPoint = 0; // Only "0" as it is used to keep track of the number of positive integers.
+
+          if (FirstNumber > 0) {
+              StartingPoint ++;
+        } if (SecondNumber > 0) {
+            StartingPoint ++;
+        } if (ThirdNumber > 0) {
+            StartingPoint ++;
+        }
+        System.out.println(StartingPoint);
     }
 }
 
