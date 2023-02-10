@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Домашнее задание 4.
 public class Main {
     public static void main(String[] args) {
@@ -37,8 +39,21 @@ public class Main {
     /* 0). Создайте массив целых чисел. Напишете программу, которая выводит
            сообщение о том, входит ли заданное число в массив или нет. Пусть
            число для поиска задается с консоли (класс Scanner). */
-    static void enteringANumberIntoAnArray() {
+    private static void enteringANumberIntoAnArray() {
 
+        int[] arrs = {1, 2, 3, 4, 5}; // Создаем массив.
+        Scanner scr = new Scanner(System.in); // Открываем сканнер.
+        System.out.print("Enter a number to search : ");
+        int number = scr.nextInt(); // Инициализируем сканнер.
+
+        for (int i = 0; i < arrs.length; i++) // Открываем цикл.
+        {if (arrs[i] == number) {
+                System.out.println(number + " : is in the array.");
+                return; // Закрываем цикл.
+            }
+        }
+        System.out.println(number + " : is not in the array.");
+        scr.close(); // Закрываем сканнер.
     }
 
     /* 1). Создайте массив целых чисел. Удалите все вхождения
@@ -46,7 +61,8 @@ public class Main {
           Пусть число задается с консоли (класс Scanner). Если такого числа нет
         - выведите сообщения об этом.
           В результате должен быть новый массив без указанного числа. */
-    static void showThatThereIsNoNumber() {
+    private static void subtractTheArithmeticMean() {
+
     }
 
     /* 2). Создайте и заполните массив случайным числами и выведете
@@ -54,8 +70,8 @@ public class Main {
           Для генерации случайного числа используйте метод Math.random().
           Пусть будет возможность создавать массив произвольного
           размера. Пусть размер массива вводится с консоли. */
+    private static void generateRandomNumber() {
 
-    static void generateRandomNumber() {
     }
 
     /* 3). Создайте 2 массива из 5 чисел.
@@ -63,11 +79,26 @@ public class Main {
            Посчитайте среднее арифметическое элементов каждого массива и
            сообщите, для какого из массивов это значение оказалось больше (либо
            сообщите, что их средние арифметические равны). */
+    private static void showThatThereIsNoNumber() {
 
-    static void subtractTheArithmeticMean() {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
