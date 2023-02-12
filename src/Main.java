@@ -2,8 +2,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 // Домашнее задание 4.
+
 public class Main {
     public static void main(String[] args) {
+
+// Условия заданий.
 
     /* 0). Создайте массив целых чисел. Напишете программу, которая выводит
            сообщение о том, входит ли заданное число в массив или нет. Пусть
@@ -37,6 +40,7 @@ public class Main {
 
     }
 
+// Решение заданий.
 
     /* 0). Создайте массив целых чисел. Напишете программу, которая выводит
            сообщение о том, входит ли заданное число в массив или нет. Пусть
@@ -45,21 +49,19 @@ public class Main {
 
         int[] arrs = {1,2,3,4,5};// Создаем массив.
         Scanner scr = new Scanner(System.in);// Открываем сканнер.
-        System.out.print("Enter a number from 1 to 5 inclusive : ");
+        System.out.print("Enter a number : ");
         int number = scr.nextInt(); // Инициализируем переменную со сканнером.
 
-        for (int i = 0; i < arrs.length; i++) // Открываем цикл.
+        for (int i = 0; i < arrs.length; i++)// Открываем цикл.
         {
             if (arrs[i] == number) {
                 System.out.println(number + " : is in the array."); // В случае этого цикла.
+                scr.close(); // Закрываем сканнер.
                 return; // Возращаем цикл.
             }
-            }
+        }
         System.out.println(number + " : is not in the array."); // Во всех остальных случаях.
-        scr.close();// Закрываем сканнер.
     }
-
-
 
     /* 1). Создайте массив целых чисел. Удалите все вхождения
           заданного числа из массива.
@@ -78,11 +80,10 @@ public class Main {
         {
             array[p] = scr.nextInt(); // Инициализируем массив со сканнером.
         }
-
         System.out.println("Enter the elements you want to remove :");
         int removeNumber = scr.nextInt(); // Инициализируем переменную со сканнером.
-
         int newSize = 0; // Инициализируем новую переменную.
+
         for (int p = 0; p < size; p++) // Открываем цикл.
         {
             if (array[p] != removeNumber) // Не равно.
@@ -90,11 +91,11 @@ public class Main {
                 array[newSize++] = array[p];
             }
         }
-
         if (newSize == 0) {
             System.out.println("The array is now empty.");
         } else {
             System.out.println("The new array without the specified number is :");
+
             for (int p = 0; p < newSize; p++) // Открываем цикл.
             {
                 System.out.print(array[p] + " ");
@@ -122,22 +123,20 @@ public class Main {
             array[f] = random.nextInt(100); /* Задаем в массив рандом. Положительное число
                                                      от 0 до 99 включительно.*/
         }
-
         int maximumValue = array[0]; // Максимальное значение.
         int minimumValue = array[0]; // Минимальное значение.
         int sum = 0; // Сумма.
+
         for (int f = 0; f < size; f++) // Открываем цикл.
         {
             maximumValue = Math.max(maximumValue, array[f]);
             minimumValue = Math.min(minimumValue, array[f]);
             sum += array[f];
         }
-
         double averageValue = (double) sum / size; // Выводим двойное среднее значение.
         System.out.println("The maximum value in the array is : " + maximumValue);
         System.out.println("The minimum value in the array is : " + minimumValue);
         System.out.println("The average value in the array is : " + averageValue);
-
     }
 
     /* 3). Создайте 2 массива из 5 чисел.
@@ -158,8 +157,8 @@ public class Main {
             array1[s] = random.nextInt(100); // Положительное число от 0 до 99 включительно.
             array2[s] = random.nextInt(100); // Положительное число от 0 до 99 включительно.
         }
-
         System.out.println("Array 1: ");
+
         for (int s = 0; s < 5; s++) // Открываем цикл.
         {
             System.out.print(array1[s] + " ");
@@ -167,6 +166,7 @@ public class Main {
         System.out.println();
 
         System.out.println("Array 2: ");
+
         for (int s = 0; s < 5; s++) // Открываем цикл.
         {
             System.out.print(array2[s] + " ");
@@ -174,6 +174,7 @@ public class Main {
         System.out.println();
 
         int sum1 = 0; // Сумма 1.
+
         for (int s = 0; s < 5; s++) // Открываем цикл.
         {
             sum1 += array1[s];
@@ -181,6 +182,7 @@ public class Main {
         double average1 = (double) sum1 / 5; // Выводим двойное среднее значение суммы 1.
 
         int sum2 = 0; // Сумма 2.
+
         for (int s = 0; s < 5; s++) // Открываем цикл.
         {
             sum2 += array2[s];
