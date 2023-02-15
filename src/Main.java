@@ -103,9 +103,12 @@ public class Main {
 
         int a = 3; // Введите любое проверочное число.
         int b = 7; // Введите любое проверочное число.
-        int c = 5; // Введите любое проверочное число.
+        int c = 10; // Введите любое проверочное число.
 
-        if (a + b > c && a + c > b && b + c > a) {
+        //if (a + b > c && a + c > b && b + c > a) - Так я сразу сделал.
+        if (a + b >= c && a + c >= b && b + c >= a) /* А так надо было сделать т.к. в задаче ничего небыло указано
+                                                       о равенстве сторон */
+        {
             System.out.println("Triangle exists.");
         } else {
             System.out.println("Triangle does not exist.");
@@ -117,10 +120,10 @@ public class Main {
           10. Вывести полученное число. */
     static void additionAndSubtractionOfANumber() {
 
-        int number = 375; // Введите любое проверочное число.
+        int number = 0; // Введите любое проверочное число.
         int result;
 
-        if (number > 0) {
+        if (number >= 0) {
             result = number + 1;
         } else if (number < 0) {
             result = number - 2;
@@ -133,19 +136,19 @@ public class Main {
     // 4) Даны 3 целых числа. Найти количество положительных чисел в исходном наборе.
     static void findPositiveNumbers() {
 
-        int firstNumber = 3; // Введите любое проверочное число.
+        int firstNumber = 0; // Введите любое проверочное число.
         int secondNumber = 7; // Введите любое проверочное число.
         int thirdNumber = 5; // Введите любое проверочное число.
         int quantivtyOfPositieNumbers = 0; /* Только "0", так как он используется для отслеживания
                                               количества положительных целых чисел.*/
 
-        if (firstNumber > 0) {
+        if (firstNumber >= 0) {
             quantivtyOfPositieNumbers++;
         }
-        if (secondNumber > 0) {
+        if (secondNumber >= 0) {
             quantivtyOfPositieNumbers++;
         }
-        if (thirdNumber > 0) {
+        if (thirdNumber >= 0) {
             quantivtyOfPositieNumbers++;
         }
         System.out.println(quantivtyOfPositieNumbers);
@@ -154,25 +157,25 @@ public class Main {
     // 5) Даны 3 целых числа. Найти количество положительных и отрицательных чисел в исходном наборе.
     static void findPositiveAndNegativeNumbers() {
 
-        int firstNumber = -3; // Введите любое проверочное число.
+        int firstNumber = 0; // Введите любое проверочное число.
         int secondNumber = 7; // Введите любое проверочное число.
-        int thirdNumber = 5; // Введите любое проверочное число.
+        int thirdNumber = -5; // Введите любое проверочное число.
         int positive = 0; // Только "0", так как он используется для отслеживания количества положительных целых чисел.
         int negative = 0; // Только "0", так как он используется для отслеживания количества отрицательных целых чисел.
 
-        if (firstNumber > 0) {
+        if (firstNumber >= 0) {
             positive++;
         } else if (firstNumber < 0) {
             negative++;
         }
 
-        if (secondNumber > 0) {
+        if (secondNumber >=0) {
             positive++;
         } else if (secondNumber < 0) {
             negative++;
         }
 
-        if (thirdNumber > 0) {
+        if (thirdNumber >= 0) {
             positive++;
         } else if (thirdNumber < 0) {
             negative++;
