@@ -43,12 +43,12 @@ public class Main {
                 {1, 2, 3},
                 {4, 5, 6},
                 {7, 8, 9}
-        }; // p.s. Этот метод создания для меня более удобен и понятен).
+        }; // p.s. Этот способ создания для меня более удобен и понятен).
 
         // Предлогаем пользователю ввести число для увеличения каждого элемента.
         Scanner scr = new Scanner(System.in); // Открываем сканнер.
-        System.out.print("Enter a number to increment each element: ");
-        int increment = scr.nextInt();
+        System.out.print("Enter a number to increment each element: "); // Вводим число для увеличения элемента.
+        int increment = scr.nextInt(); // Инициализируем сканнер.
         scr.close(); // Закрываем сканнер.
 
         // Используем вложенные циклы для увеличения каждого элемента в массиве на заданное число.
@@ -61,7 +61,7 @@ public class Main {
         // Выводим обновленный массив.
         for (int i = 0; i < array.length; i++) {
             for (int s = 0; s < array[i].length; s++) {
-                System.out.print(array[i][s] + " "); // Отступ.
+                System.out.print(array[i][s] + "  "); // Двойной отступ.p.s. Так красивее).
             }
             System.out.println();
         }
@@ -81,7 +81,28 @@ public class Main {
           W B W B W B W B
           B W B W B W B W */
     private static void createAChessboard(){
+        String[][] board = new String[8][8]; // Создаем двумерный массив стринг.
 
+        // Перебераем строки и столбцы доски в цикле.
+        for (int r = 0; r < board.length; r++) {
+            for (int e = 0; e < board[r].length; e++) {
+                // Если сумма индексов строки и столбца четная, закрашиваем ячейку белым цветом.
+                if ((r + e) % 2 == 0) { // Используем модус,для проверки является ли эта сумма четным числом .
+                    board[r][e] = "W"; // Можно заменить на "Б".
+                } else {
+                    // В остальных случаях закрашиваем ячейку черным цветом.
+                    board[r][e] = "B"; // Можно заменить на "Ч".
+                }
+            }
+        }
+
+        // Выводим получившуюся шахматную доску.
+        for (int r = 0; r < board.length; r++) {
+            for (int e = 0; e < board[r].length; e++) {
+                System.out.print(board[r][e] + "  "); // Двойной отступ.p.s. Так красивее).
+            }
+            System.out.println();
+        }
     }
 }
 
