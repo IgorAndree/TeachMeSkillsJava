@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Домашнее задание 5
 public class Main {
 
@@ -36,6 +38,33 @@ public class Main {
           увеличиваться каждый элемент, задается из консоли. */
     private static void createA2DArray() {
 
+        // Создаем двумерный массив целых чисел.
+        int[][] array = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        }; // p.s. Этот метод создания для меня более удобен и понятен).
+
+        // Предлогаем пользователю ввести число для увеличения каждого элемента.
+        Scanner scr = new Scanner(System.in); // Открываем сканнер.
+        System.out.print("Enter a number to increment each element: ");
+        int increment = scr.nextInt();
+        scr.close(); // Закрываем сканнер.
+
+        // Используем вложенные циклы для увеличения каждого элемента в массиве на заданное число.
+        for (int i = 0; i < array.length; i++) {
+            for (int s = 0; s < array[i].length; s++) {
+                array[i][s] += increment;
+            }
+        }
+
+        // Выводим обновленный массив.
+        for (int i = 0; i < array.length; i++) {
+            for (int s = 0; s < array[i].length; s++) {
+                System.out.print(array[i][s] + " "); // Отступ.
+            }
+            System.out.println();
+        }
     }
 
     /* 2).Шахматная доска
