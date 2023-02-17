@@ -51,12 +51,12 @@ public class Main {
         Scanner scr = new Scanner(System.in);// Открываем сканнер.
         System.out.print("Enter a number : ");
         int number = scr.nextInt(); // Инициализируем переменную со сканнером.
+        scr.close(); // Закрываем сканнер.
 
         for (int i = 0; i < arrs.length; i++)// Открываем цикл.
         {
             if (arrs[i] == number) {
                 System.out.println(number + " : is in the array."); // В случае этого цикла.
-                scr.close(); // Закрываем сканнер.
                 return; // Возращаем цикл.
             }
         }
@@ -81,7 +81,8 @@ public class Main {
             array[p] = scr.nextInt(); // Инициализируем массив со сканнером.
         }
         System.out.println("Enter the elements you want to remove :");
-        int removeNumber = scr.nextInt(); // Инициализируем переменную со сканнером.
+        int removeNumber = scr.nextInt(); // // Инициализируем переменную со сканнером.
+        scr.close(); // // Закрываем сканнер.
         int newSize = 0; // Инициализируем новую переменную.
 
         for (int p = 0; p < size; p++) // Открываем цикл.
@@ -99,7 +100,6 @@ public class Main {
             for (int p = 0; p < newSize; p++) // Открываем цикл.
             {
                 System.out.print(array[p] + " ");
-                scr.close(); // Закрываем сканнер.
             }
         }
     }
@@ -114,8 +114,8 @@ public class Main {
         Scanner scr = new Scanner(System.in);// Открываем сканнер.
         System.out.println("Enter the size of the array : ");
         int size = scr.nextInt(); // Инициализируем переменную со сканнером.
-        int[] array = new int[size]; // Создаем массив.
         scr.close(); // Закрываем сканнер.
+        int[] array = new int[size]; // Создаем массив.
         Random random = new Random(); // Инициализируем рандом.
 
         for (int f = 0; f < size; f++) // Открываем цикл.
@@ -146,8 +146,6 @@ public class Main {
            сообщите, что их средние арифметические равны). */
     private static void subtractTheArithmeticMean() {
 
-        Scanner scr = new Scanner(System.in); // Открываем сканнер.
-        scr.close(); // Закрываем сканнер.
         Random random = new Random(); // Иниацилизируем рандом.
 
         int[] array1 = new int[5]; // Инициализируем массив 1.
