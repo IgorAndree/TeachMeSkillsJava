@@ -1,19 +1,19 @@
-package HomeworkSeven.Two;
+package HomeworkSeven.Two.WithCorrections;
 
 /* 2). Создать класс Машина со следующими параметрами: модель, цвет, год
-       п/роизводства, максимальная скорость (используем принципы инкапсуляции). В
+       производства, максимальная скорость (используем принципы инкапсуляции). В
        основном классе создать два массива объектов класса машина с разными
        моделями машин (по 4 объекта в каждом). Через сравнение всех моделей
-       машин, вывести самую старую модель и самую быструю */
+       машин, вывести самую старую модель и самую быструю. */
 
-// Создаем класс Машина.
-public class Car {
+
+public class Cars { // Инкапсуляция.
     private  String model; // Модель.
     private  String color; // Цвет.
     private  int yearProduction; // Год выпуска.
     private  int maxSpeed; // Максимальная скорость.
 
-    public Car(String model, String color, int yearProduction, int maxSpeed) {
+    public Cars(String model, String color, int yearProduction, int maxSpeed) {
         // Создаем конструктор для создания нового объекта Car с заданными параметрами.
         this.model = model; // Модель
         this.color = color; // Цвет
@@ -41,4 +41,5 @@ public class Car {
         return maxSpeed;
     }
 }
+
 
