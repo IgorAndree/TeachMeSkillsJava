@@ -29,19 +29,19 @@ public class DocumentUtils {
         String documentNumber = "1234-abc-5678-xyz-1a2b";
 
         // Отображает первые два цифровых блока номера документа.
-        DocumentUtils.outputOfTheFirstTwoDigitalBlocks(documentNumber);
+        outputOfTheFirstTwoDigitalBlocks(documentNumber);
         // Маскирует буквы номера документа звездочками.
-        DocumentUtils.outputMaskingLettersWithAsterisks(documentNumber);
+        outputMaskingLettersWithAsterisks(documentNumber);
         // Выводит буквы из номера документа в нижнем регистре.
-        DocumentUtils.displayLettersInLowerCase(documentNumber);
+        displayLettersInLowerCase(documentNumber);
         // Выводит буквы из номера документа в верхнем регистре.
-        DocumentUtils.displayLettersInUpperCase(documentNumber);
+        displayLettersInUpperCase(documentNumber);
         // Проверяет, содержит ли номер документа определенную последовательность символов.
-        DocumentUtils.checkForASpecificSequenceOfCharacters(documentNumber);
+        checkForASpecificSequenceOfCharacters(documentNumber);
         // Проверяет, начинается ли номер документа с определенной последовательности символов.
-        DocumentUtils.checkTheBeginningWithACertainSequenceOfCharacters(documentNumber);
+        checkTheBeginningWithACertainSequenceOfCharacters(documentNumber);
         // Проверяет, заканчивается ли номер документа определенной последовательностью символов.
-        DocumentUtils.checkIfItEndsWithACertainSequenceOfCharacters(documentNumber);
+        checkIfItEndsWithACertainSequenceOfCharacters(documentNumber);
     }
 
     // Метод для отображения первых двух цифровых блоков номера документа.
