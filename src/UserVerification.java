@@ -13,8 +13,7 @@
 
 
 // Объявляем класс, для проверки пользователя.
- public class UserValidation {
-
+public class UserVerification {
     // Определяем статический метод проверки, который принимает три параметра.
     public static boolean verification(String login, String password, String confirmationPassword)
             throws WrongLoginException, WrongPasswordException {
@@ -34,45 +33,5 @@
 
         // Если ни одно из приведенных выше условий не выполняется, вернуть "true", чтобы указать на успешную проверку.
         return true;
-
-    }
-
-    // Определяем основной метод для ввода и вывода данных.
-    public static void main(String[] args) {
-        try {
-
-            // Вызов метода проверки с заданными параметрами.
-            verification("Username", "Password1", "Password1"); // Вводим проверочные данные.
-            System.out.println("Verification passed"); // Проверка пройдена.
-        } catch (WrongLoginException | WrongPasswordException e) {
-            System.out.println("Verification failed: " + e.getMessage()); // Проверка провалилась.
-
-        }
-    }
-
-    // Определяем подкласс, "Исключение входа в систему", наследующий базовый класс "Исключение".
-    static class WrongLoginException extends Exception {
-        public WrongLoginException(String message) {
-            super(message); // Полное наследование.
-        }
-    }
-
-    // Определям подкласс, "Исключение неправильного пароля", наследующий базовый класс "Исключение".
-    static class WrongPasswordException extends Exception {
-        public WrongPasswordException(String message) {
-            super(message); // Полное наследование.
-        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
